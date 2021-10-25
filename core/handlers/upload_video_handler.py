@@ -12,19 +12,19 @@ async def send_video_handler(bot, cmd, output_vid, video_thumbnail, duration, wi
     sent_vid = await bot.send_video(
         chat_id=cmd.chat.id,
         video=output_vid,
-        caption=f"**File Name:** `{output_vid}`\n**Video Duration:** `{format_timespan(duration)}`\n**File Size:** `{humanbytes(file_size)}`\n\n{Config.CAPTION}",
+        caption=f"**Dosya Adı:** `{output_vid}`\n**Video Süresi:** `{format_timespan(duration)}`\n**Dosya Boyutu:** `{humanbytes(file_size)}`\n\n{Config.CAPTION}",
         thumb=video_thumbnail,
         duration=duration,
         width=width,
         height=height,
         reply_to_message_id=cmd.message_id,
         supports_streaming=True,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/AbirHasan2005")],
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Developer", url="https://t.me/mmagneto")],
                                            [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
                                            [InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]),
         progress=progress_for_pyrogram,
         progress_args=(
-            "Uploading, Wait Sir ...",
+            "Yükleniyor, Bekleyin...",
             editable,
             logs_msg,
             c_time
