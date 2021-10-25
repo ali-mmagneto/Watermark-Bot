@@ -250,8 +250,8 @@ async def VidWatermarkAdder(bot, cmd):
 		await logs_msg.edit("#ERROR: Something went wrong!")
 		await delete_all()
 		return
-	await editable.edit("Watermark Added Successfully!\n\nTrying to Upload ...")
-	await logs_msg.edit("Watermark Added Successfully!\n\nTrying to Upload ...", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Ban User", callback_data=f"ban_{cmd.from_user.id}")]]))
+	await editable.edit("Watermark Başarı ile eklendi!\n\nYükleniyor ...")
+	await logs_msg.edit("Watermark Başarı İle Eklendi!\n\nYükleniyor...", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Ban User", callback_data=f"ban_{cmd.from_user.id}")]]))
 	width = 100
 	height = 100
 	duration = 0
@@ -327,7 +327,7 @@ async def VidWatermarkAdder(bot, cmd):
 		sent_vid = await send_video_handler(bot, cmd, output_vid, video_thumbnail, duration, width, height, editable, logs_msg, file_size)
 	except Exception as err:
 		print(f"Unable to Upload Video: {err}")
-		await logs_msg.edit(f"#ERROR: Unable to Upload Video!\n\n**Error:** `{err}`")
+		await logs_msg.edit(f"#ERROR: yüklenemedi!\n\n**Error:** `{err}`")
 		await delete_all()
 		return
 	await delete_all()
