@@ -96,8 +96,8 @@ async def vidmark(the_media, message, working_dir, watermark_path, output_vid, t
                 ''.join(["▓" for i in range(math.floor(percentage / 10))]),
                 ''.join(["░" for i in range(10 - math.floor(percentage / 10))])
                 )
-            stats = f'📦️ **Adding Watermark [Preset: `{mode}`]**\n\n' \
-                    f'⏰️ **ETA:** `{ETA}`\n❇️ **Position:** `{position}`\n🔰 **PID:** `{process.pid}`\n🔄 **Duration: `{format_timespan(total_time)}`**\n\n' \
+            stats = f'📦️ **Ekelniyor küçük foto [Preset: `{mode}`]**\n\n' \
+                    f'⏰️ **ETA:** `{ETA}`\n❇️ **Konum:** `{position}`\n🔰 **PID:** `{process.pid}`\n🔄 **Duration: `{format_timespan(total_time)}`**\n\n' \
                     f'{progress_str}\n'
             try:
                 await logs_msg.edit(text=stats)
